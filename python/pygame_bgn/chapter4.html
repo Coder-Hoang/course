@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coder Hoang Pygame Bigginner Offisial Pygame Code</title>
+    <link rel="stylesheet" href="chapter3.css">
+</head>
+<body>
+    <div class="header"></div>
+
+    <h1 class="ch-website-header">The Coder Hoang Offisial Pygame Bgn Courses</h1>
+
+    <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="http://coder-hoang.github.io">Coder Hoang Website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://coder-hoang.github.io">Hoang Nguyen</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p>
+
+    <h1 class="title">Chapter 4: Basic Animation</h1>
+
+    <div class="chap1">
+        <h2 class="parttwo">What is our plan for the animation?</h2>
+
+        <h3 class="parttwoex">First, we need to create a image and blit it on the screen properly.</h3>
+
+        <video class="intro" controls>
+            <source src="../../video/pygame_bgn/pygame animation.mp4" type="video/mp4">
+            <p>Your browser doesn't support HTML5 video. Please download the latest version of the browser or try Google Chrome instead</p>
+        </video>
+    </div>
+
+    <h2 class="parttwo">Next, look at the code down below, it should explain to you the simpliest way and make sure that you have the assets 1, 2, 3, 4.png in you file</h2>
+
+    <pre><code>
+import pygame
+
+# Set screen size
+screen_width = 800
+screen_height = 600
+screen = pygame.display.set_mode((screen_width, screen_height))
+
+# Load images (replace 'image1.png', etc. with your actual filenames)
+image1 = pygame.image.load('1.png')
+image2 = pygame.image.load('2.png')
+image3 = pygame.image.load('3.png')
+image4 = pygame.image.load('4.png')
+
+# Create a list to hold the images for easy iteration
+images = [image1, image2, image3, image4]
+
+# Current image index (starts at 0)
+current_image_index = 0
+
+# Animation speed (in milliseconds)
+animation_speed = 100  # Adjust for desired speed
+
+# Game loop
+running = True
+while running:
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      running = False
+
+  # Clear the screen
+  screen.fill((0, 0, 0))  # Black background
+
+  # Draw the current image
+  screen.blit(images[current_image_index], (0, 0))
+
+  # Update animation
+  pygame.time.delay(animation_speed)  # Wait for some time
+  current_image_index = (current_image_index + 1) % len(images)  # Loop through images
+
+  # Update the display
+  pygame.display.flip()
+    </code></pre>
+
+    <h2 class="should">This is what you should get</h2>
+
+    <img src="../../img/should get.png" alt="what you should get" class="should-get">
+
+    <h1 class="question-one">What can't you draw with Pygame surface</h1>
+    <h2 id="one-answer-text">Please choose your answer</h2>
+    <div class="one-button-container">
+        <button class="one-answer-button" value="one-A" id="one-answer-button-a">A: Images</button>
+        <button class="one-answer-button" value="one-B" id="one-answer-button-b">B: Rectangle & Squares</button>
+        <button class="one-answer-button" value="one-C" id="one-answer-button-c">C: Hexagon</button>
+        <button class="one-answer-button" value="one-D" id="one-answer-button-d">D: None of above</button>
+    </div>  
+
+    <h1 class="question-two">True or False: Pygame Surface can draw anything</h1>
+    <h2 id="two-answer-text">Please choose your answer</h2>
+
+    <div class="two-button-container">
+        <button class="two-answer-button" value="two-A" id="two-answer-button-a">True</button>
+        <button class="two-answer-button" value="two-B" id="two-answer-button-b">False</button>
+    </div>
+
+    <a href="index.html"><button class="back">Back To the main courses site</button></a>
+
+    <script src="chapter3.js"></script>
+</body>
+</html>

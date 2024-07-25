@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coder Hoang Pygame Bigginner Offisial Pygame Code</title>
+    <link rel="stylesheet" href="chapter2.css">
+</head>
+<body>
+    <div class="header"></div>
+
+    <h1 class="ch-website-header">The Coder Hoang Offisial Pygame Bgn Courses</h1>
+
+    <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="http://coder-hoang.github.io">Coder Hoang Website</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://coder-hoang.github.io">Hoang Nguyen</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></a></p>
+
+    <h1 class="title">Chapter 1: Mouse Click</h1>
+
+    <h2 class="partone">How does mouse click works in Pygame?</h2>
+
+    <h3 class="partoneex">Mouse click works by first, you need to get the mouse position and makes it update constantly by using pygame.mouse.get_pos()
+        and then say if the mouse is in in {mouse_pos} and the mouse click type is left right, middle, scoll up or down.
+    </h3>
+
+    <div class="chap1">
+        <h2 class="partone">Watch the video to know</h2>
+
+        <video class="intro" controls>
+            <source src="../../video/pygame_inter/mouse_click.mp4" type="video/mp4">
+            <p>Your browser doesn't support HTML5 video. Please download the latest version of the browser or try Google Chrome instead</p>
+        </video>
+    </div>
+
+    <h3 class="partoneex">Another way to do this is using the get rect function for the mouse and the object it collided with. After this do the collidirect function.
+    </h3>
+
+    <h1 class="dash">------------------------------------------------------------------------------------</h1>
+
+    <h1 class="question-one">Not learned questions: What mouse button is the event.button == 2?</h1>
+    <h2 id="one-answer-text">Please choose your answer</h2>
+
+    <div class="one-button-container">
+        <button class="one-answer-button" value="one-A" id="one-answer-button-a">A: Left click</button>
+        <button class="one-answer-button" value="one-B" id="one-answer-button-b">B: Right click</button>
+        <button class="one-answer-button" value="one-C" id="one-answer-button-c">C: Middle click</button>
+        <button class="one-answer-button" value="one-D" id="one-answer-button-d">D: Scroll</button>
+    </div>  
+
+    <h1 class="question-two">Not learned questions: What mouse button is the event.button == 3?</h1>
+    <h2 id="two-answer-text">Please choose your answer</h2>
+
+    <div class="two-button-container">
+        <button class="two-answer-button" value="two-A" id="two-answer-button-a">A: Right click</button>
+        <button class="two-answer-button" value="two-B" id="two-answer-button-b">B: Left click</button>
+        <button class="two-answer-button" value="two-C" id="two-answer-button-c">C: Scroll up</button>
+        <button class="two-answer-button" value="two-D" id="two-answer-button-d">D: Middle click</button>
+    </div>  
+
+    <h1 class="question-three">Not learned questions: What mouse button is the event.button == 4?</h1>
+    <h2 id="three-answer-text">Please choose your answer</h2>
+
+    <div class="three-button-container">
+        <button class="three-answer-button" value="three-A" id="three-answer-button-a">A: Scoll up</button>
+        <button class="three-answer-button" value="three-B" id="three-answer-button-b">B: Scoll down</button>
+        <button class="three-answer-button" value="three-C" id="three-answer-button-c">C: Middle click</button>
+        <button class="three-answer-button" value="three-D" id="three-answer-button-d">D: None of above</button>
+    </div>
+
+    <h3 class="partoneex">As you could have guess, the event.button == 5 is the scool down.</h3>
+
+    <a href="index.html"><button class="back">Back To the main courses site</button></a>
+
+    <script src="chapter2.js"></script>
+</body>
+</html>
